@@ -139,7 +139,7 @@
     <ol>
       <li><strong>Pick an account using the table above.</strong> Over ~$40k net and no employees? Solo 401(k). Under that or want dead simple? SEP IRA.</li>
       <li><strong>Choose a major brokerage</strong> — Fidelity, Schwab, Vanguard, and others all offer both accounts with no setup fees and low-cost index funds. Open the account online in about 20 minutes.</li>
-      <li><strong>Fund it with a transfer</strong> from your business savings. You can contribute in a lump sum or set up monthly transfers — a $500/month automatic transfer is $6,000/year without thinking about it.</li>
+      <li><strong>Fund it with a transfer</strong> from your business savings. You can contribute in a lump sum or set up monthly transfers — a $500/month automatic transfer is $6,000/year without thinking about it. <a href="the-percentage-budget.html">The percentage budget</a> makes this automatic with a dedicated savings bucket.</li>
       <li><strong>Invest it.</strong> Contributions sitting in cash aren't compounding. A target-date fund matching your expected retirement year is a fine default.</li>
     </ol>
 
@@ -215,6 +215,13 @@
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
     });
   }
 })();
