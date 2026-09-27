@@ -11,6 +11,11 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://freelancer-finance.pages.dev/articles/2026-quarterly-tax-deadlines.html">
   <link rel="stylesheet" href="../styles.css">
+<script>
+/* Theme bootstrap: apply the saved theme (or prefers-color-scheme) before first paint. */
+(function(){try{var t=localStorage.getItem('gigledger-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+<script src="../assets/site.js" defer></script>
 </head>
 <body>
 
@@ -26,7 +31,6 @@
         <span class="brand-tag">Money advice for people who get paid like it rains</span>
       </span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
     <nav class="site-nav" id="siteNav" aria-label="Primary">
       <ul>
         <li><a href="../index.html">Home</a></li>
@@ -36,7 +40,17 @@
         <li><a href="sep-ira-vs-solo-401k.html">Retirement</a></li>
         <li><a href="../disclosure.html">Disclosure</a></li>
       </ul>
+      <form class="site-search" role="search" onsubmit="return false;">
+        <label class="visually-hidden" for="siteSearch">Search articles</label>
+        <input id="siteSearch" class="site-search-input" type="search" name="q" placeholder="Search articles…" autocomplete="off" aria-expanded="false" aria-controls="searchResults" role="combobox" aria-autocomplete="list">
+        <div class="site-search-results" id="searchResults" role="listbox" hidden></div>
+      </form>
+
     </nav>
+    <div class="header-buttons">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode"><span class="theme-icon" aria-hidden="true">☾</span></button>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+    </div>
   </div>
 </header>
 
@@ -191,26 +205,6 @@
     <p class="footer-bottom">© 2026 The Gig Ledger. Educational content only — not tax, legal, or investment advice. <a href="../disclosure.html">Read our affiliate disclosure.</a></p>
   </div>
 </footer>
-
-<script>
-(function () {
-  var toggle = document.getElementById('navToggle');
-  var nav = document.getElementById('siteNav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
-      }
-    });
-  }
-})();
-</script>
 
 </body>
 </html>
