@@ -73,7 +73,7 @@
         <tr><td>Q4</td><td>Sep 1 – Dec 31, 2026</td><td>January 15, 2027</td></tr>
       </tbody>
     </table>
-    <p>Note the uneven periods — the second "quarter" only covers two months. Mark these on your calendar now, because the penalty clock starts the day after each deadline.</p>
+    <p>Note the uneven periods — the second "quarter" only covers two months. Mark these on your calendar now, because the penalty clock starts the day after each deadline. For the full date-by-date calendar plus the penalty math for a missed payment, see <a href="2026-quarterly-tax-deadlines.html">2026 Quarterly Tax Deadlines</a>.</p>
 
     <h3>How much to pay: the safe harbor rule</h3>
     <p>The IRS charges an underpayment penalty if you pay too little, too late. But there's a legal shortcut called the <strong>safe harbor</strong>: you owe no penalty if your total estimated payments plus withholding equal at least the <strong>smaller</strong> of:</p>
@@ -103,7 +103,7 @@
     <h3>Deduction categories freelancers consistently under-claim</h3>
     <ul>
       <li><strong>Home office.</strong> Two methods: the <em>simplified</em> method ($5 per square foot, up to 300 sq ft = max $1,500 deduction, no receipts needed) or the <em>regular</em> method (actual percentage of rent, utilities, insurance). Run both; the regular method usually wins if your rent is high, the simplified method wins on paperwork.</li>
-      <li><strong>Mileage.</strong> The IRS standard mileage rate for 2026 is <strong>72.5 cents per mile</strong>. Drive 8,000 business miles and that's a $5,800 deduction. Track with an app or a notebook in the glovebox — the IRS wants date, destination, and business purpose.</li>
+      <li><strong>Mileage.</strong> The IRS raised the 2026 standard mileage rate mid-year: <strong>72.5 cents per mile</strong> for January 1 – June 30, then <strong>76 cents per mile</strong> from July 1 onward. Drive 8,000 business miles in the second half of the year and that's a $6,080 deduction. Track with an app or a notebook in the glovebox — the IRS wants date, destination, and business purpose.</li>
       <li><strong>Health insurance premiums.</strong> If you're self-employed and not eligible for an employer plan (including through a spouse), you can deduct 100% of premiums for yourself, your spouse, and dependents — taken on Schedule 1, not Schedule C, but it still lowers your AGI.</li>
       <li><strong>Retirement contributions.</strong> SEP IRA and Solo 401(k) contributions are deductible (more on these in Part 4).</li>
       <li><strong>Business software and subscriptions.</strong> Invoicing tools, Adobe Creative Cloud, project management apps, your website hosting — all deductible.</li>
@@ -115,7 +115,7 @@
     </ul>
 
     <h3>The one deduction most freelancers miss: the QBI deduction</h3>
-    <p>Section 199A lets many self-employed people deduct <strong>up to 20% of qualified business income</strong> — a straight reduction of taxable income, no extra spending required. It phases out at higher incomes (roughly $197,000 single / $394,000 joint for 2026 — verify current-year thresholds), and some service businesses face limits above those thresholds. If your net profit is $80,000 and you qualify, that's up to a $16,000 deduction you get just for being self-employed. Ask your tax preparer whether you qualify before you file.</p>
+    <p>Section 199A lets many self-employed people deduct <strong>up to 20% of qualified business income</strong> — a straight reduction of taxable income, no extra spending required. It phases out at higher incomes ($201,750 single / $403,500 joint for 2026 — verify current-year thresholds), and some service businesses face limits above those thresholds. If your net profit is $80,000 and you qualify, that's up to a $16,000 deduction you get just for being self-employed. Ask your tax preparer whether you qualify before you file.</p>
 
     <h2>Part 3: Schedule SE — the 15.3% nobody warns you about</h2>
 
@@ -136,12 +136,12 @@
 
     <h3>Solo 401(k) (for businesses with no employees other than a spouse)</h3>
     <ul>
-      <li>Two contribution buckets: as the "employee," up to <strong>$24,500 in elective deferrals for 2026</strong> (plus $11,500 catch-up if 50+); as the "employer," up to 25% of compensation. Combined cap: <strong>$72,000 for 2026</strong> (under 50).</li>
+      <li>Two contribution buckets: as the "employee," up to <strong>$24,500 in elective deferrals for 2026</strong> (plus $8,000 catch-up if 50+; $11,250 at ages 60–63); as the "employer," up to 25% of compensation. Combined cap: <strong>$72,000 for 2026</strong> (under 50).</li>
       <li>Can be opened as Roth (pay tax now, withdraw tax-free later) — the SEP IRA cannot.</li>
       <li>Slightly more paperwork; if the balance exceeds $250,000 you file <strong>Form 5500-EZ</strong> annually.</li>
     </ul>
 
-    <p><strong>Which wins?</strong> A quick rule of thumb:</p>
+    <p><strong>Which wins?</strong> A quick rule of thumb: for the full side-by-side — including how to open an account this week — read <a href="sep-ira-vs-solo-401k.html">SEP IRA vs. Solo 401(k)</a>.</p>
     <table>
       <thead>
         <tr><th>Your situation</th><th>Better pick</th></tr>
@@ -244,6 +244,13 @@
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
     });
   }
 })();
