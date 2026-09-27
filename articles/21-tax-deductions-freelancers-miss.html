@@ -62,7 +62,7 @@
     <ol>
       <li><strong>Home office — simplified method.</strong> $5 per square foot, up to 300 sq ft. A 120-sq-ft dedicated office = <strong>$600 deduction</strong> ≈ $222 saved, with almost no recordkeeping.</li>
       <li><strong>Home office — regular method.</strong> Deduct the business percentage of rent, utilities, renter's/homeowner's insurance. A 10% office in a $2,000/mo apartment: $200/mo = <strong>$2,400 deduction</strong> ≈ $888 saved. Run both methods; take whichever is bigger.</li>
-      <li><strong>Mileage.</strong> The 2026 standard rate is <strong>72.5¢/mile</strong>. A photographer driving 8,000 business miles = <strong>$5,800 deduction</strong> ≈ $2,146 saved. The IRS wants date, destination, and business purpose for each trip.</li>
+      <li><strong>Mileage.</strong> The 2026 standard rate was raised mid-year: <strong>72.5¢/mile</strong> for Jan–Jun, <strong>76¢/mile</strong> from July 1. A photographer driving 8,000 business miles in the second half = <strong>$6,080 deduction</strong> ≈ $2,250 saved. The IRS wants date, destination, and business purpose for each trip.</li>
       <li><strong>Actual vehicle expenses.</strong> Alternative to mileage: deduct the business-use percentage of gas, insurance, repairs, and depreciation. A rideshare driver at 80% business use with $9,000 in vehicle costs = <strong>$7,200 deduction</strong>. Run it against the mileage method yearly — high-cost vehicles often win here.</li>
       <li><strong>Health insurance premiums.</strong> Self-employed and not eligible for an employer plan (including a spouse's)? Deduct 100% of premiums for yourself, spouse, and dependents. $550/mo family premium = <strong>$6,600 deduction</strong> on Schedule 1 ≈ $2,442 saved.</li>
       <li><strong>Retirement contributions.</strong> SEP IRA or Solo 401(k) contributions are deductible. A $10,000 Solo 401(k) contribution = <strong>$10,000 deduction</strong> ≈ $3,700 saved — plus the money is now growing for retirement.</li>
@@ -80,7 +80,7 @@
       <li><strong>Education &amp; certifications.</strong> A $1,200 certification that maintains or improves skills for your current business = <strong>$1,200 deduction</strong> ≈ $444 saved. (Education qualifying you for a <em>new</em> trade doesn't count.)</li>
       <li><strong>Travel for business.</strong> A $450 flight + $600 hotel + $200 meals-at-50% ($100) for a client trip = <strong>$1,150 deduction</strong> ≈ $426 saved. Keep itineraries proving the business purpose.</li>
       <li><strong>Home internet upgrade for work.</strong> If you upgraded to gigabit specifically for video calls and large uploads, the business-use percentage of the <em>upgrade cost</em> is defensible. $30/mo extra × 80% business = <strong>$288 deduction</strong>.</li>
-      <li><strong>The QBI deduction.</strong> Section 199A lets many self-employed people deduct up to <strong>20% of qualified business income</strong> — no spending required. $80,000 net profit × 20% = <strong>$16,000 deduction</strong> ≈ $5,920 saved. It phases out above ~$197k single / $394k joint (verify current-year thresholds). Ask your preparer if you qualify — this is the single biggest line most freelancers miss.</li>
+      <li><strong>The QBI deduction.</strong> Section 199A lets many self-employed people deduct up to <strong>20% of qualified business income</strong> — no spending required. $80,000 net profit × 20% = <strong>$16,000 deduction</strong> ≈ $5,920 saved. It phases out above $201,750 single / $403,500 joint in 2026 (verify current-year thresholds). Ask your preparer if you qualify — this is the single biggest line most freelancers miss. (Our <a href="the-freelancers-tax-playbook.html">tax playbook</a> walks through the QBI phase-out in detail.)</li>
     </ol>
 
     <!-- AFFILIATE: Expense-tracker and mileage apps, receipt scanners via Amazon Associates and app affiliate programs — natural fit in the tracking/audit-proofing section below. -->
@@ -171,6 +171,13 @@
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
     });
   }
 })();
