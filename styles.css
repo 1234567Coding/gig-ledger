@@ -5,7 +5,7 @@
   --accent-tint: #e9f5ee;
   --ink: #1e242e;
   --ink-soft: #4a5568;
-  --ink-faint: #718096;
+  --ink-faint: #5d6b7d;
   --paper: #ffffff;
   --paper-warm: #faf9f6;
   --rule: #e6e1d8;
@@ -36,6 +36,21 @@ h3 { font-size: 1.15rem; }
 
 a { color: var(--accent-dark); }
 a:hover { color: var(--accent); }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+.card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.site-header a:focus-visible,
+.site-header button:focus-visible,
+.site-footer a:focus-visible {
+  outline-color: #9ae6b4;
+}
 
 img, svg { max-width: 100%; height: auto; }
 
@@ -112,7 +127,9 @@ img, svg { max-width: 100%; height: auto; }
 
 /* ---------- Hero ---------- */
 .hero {
-  background: var(--ink);
+  background-color: var(--ink);
+  background-image:
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.022) 0 14px, transparent 14px 28px);
   color: #fff;
   padding: 3.5rem 0 3rem;
   border-top: 4px solid var(--accent);
@@ -166,6 +183,15 @@ img, svg { max-width: 100%; height: auto; }
   letter-spacing: 0.08em;
   color: var(--accent-dark);
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.card .kicker svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
 }
 
 .card h3 { margin: 0; font-size: 1.15rem; }
